@@ -9,19 +9,16 @@ namespace DesafioProjetoHospedagem.Models
         public Suite(char tipoSuite){
             switch(tipoSuite){
                 case 'A':
-                case 'a':
                     Tipo = "Executiva";
                     Capacidade = 6;
                     ValorDiaria = 1200.00M;
                     break;
                 case 'B':
-                case 'b':
                     Tipo = "Conforto";
                     Capacidade = 4;
                     ValorDiaria = 800.00M;
                     break;
                 case 'C':
-                case 'c':
                     Tipo = "Econômica";
                     Capacidade = 2;
                     ValorDiaria = 350.00M;
@@ -119,7 +116,7 @@ namespace DesafioProjetoHospedagem.Models
                 }
 
             }
-            return tipoSuite;
+            return tipoSuite; //sempre maiúsculo
         }
     }
 }
