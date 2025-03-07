@@ -54,18 +54,14 @@ Console.OutputEncoding = Encoding.UTF8;
 				if (reservas.Count == 0)
 				{
 					Console.WriteLine("                Nenhuma Reserva Cadastrada!");
+					break;
 				} 
-				else
+				for (int i = 0; i < reservas.Count; i++) //inicia o loop para mostrar ao usuário todos os itens (que são do tipo reservas) da lista 'reservas'
 				{
-					for (int i = 0; i < reservas.Count; i++) //inicia o loop para mostrar ao usuário todos os itens (que são do tipo reservas) da lista 'reservas'
-					{
-						Console.WriteLine("----------------------------------------------------");
-						Console.WriteLine($"{i+1} - {Reserva.MostraReserva(reservas[i], true)}"); 
-						//chama a função static 'MostraReserva' que recebe uma reserva e transoforma suas propriedades em texto para mostrar ao usuário
-					}
+					Console.WriteLine("----------------------------------------------------");
+					Console.WriteLine($"{i+1} - {Reserva.MostraReserva(reservas[i], true)}"); 
+					//chama a função static 'MostraReserva' que recebe uma reserva e transoforma suas propriedades em texto para mostrar ao usuário
 				}
-				
-				Prosseguir();
 				break;
 
 			case "3":
@@ -86,9 +82,6 @@ Console.OutputEncoding = Encoding.UTF8;
 					Console.WriteLine(" ! Nenhuma Reserva Selecionada ! ");
 				}
 				
-				Prosseguir();
-				
-				
 				break;
 				
 			case "4":
@@ -106,7 +99,7 @@ Console.OutputEncoding = Encoding.UTF8;
 				Console.WriteLine("Não entendi ... Tente Novamente!");
 				break;
 		}
-				
+		Prosseguir();	
 	}
 
 	Console.WriteLine("Encerrando programa ... ");
